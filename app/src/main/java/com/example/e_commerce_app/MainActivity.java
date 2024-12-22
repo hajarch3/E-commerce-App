@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
             //tajriba tajriba ghariba w papapapapapapapapaa
             //waa fatiha
+            // wa test num 2
+            // ou lhindi gha wliyaaaa
         });
     }
 }
