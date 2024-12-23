@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
             //waa fatiha
             // wa test num 2
             // ou lhindi gha wliyaaaa
+            // wa l3ariday day day
         });
     }
 }
