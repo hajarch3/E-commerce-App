@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
             //123547897696874
             //hajarhajar
             // tajriba2
+
+
+
+
+
+
+            // ya rebi ikhdm hadchi
         });
     }
 }
