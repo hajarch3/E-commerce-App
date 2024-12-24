@@ -28,12 +28,16 @@ public class MainActivity extends AppCompatActivity {
             //hajarhajar
             // tajriba2
 
+            //tjriba ra9m 100000
+
+
 
 
 
 
 
             // ya rebi ikhdm hadchi
+
         });
     }
 }
