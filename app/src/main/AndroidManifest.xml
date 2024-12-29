@@ -26,6 +26,9 @@
         <activity
             android:name=".MenuActivity"
             android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
