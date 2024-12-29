@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">E_Commerce_app</string>
+    <string name="app_name">E_Commerce_app
+    </string>
+    <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
+    <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
+    <string name="nav_header_title">Titre de en-tête</string>
+    <string name="nav_header_subtitle">Sous-titre de en-tête</string>
+    <string name="nav_header_desc">Description de en-tête de navigation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

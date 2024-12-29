@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_meuble"
+        android:icon="@drawable/sofa"
+        android:title="Meubles" />
+    <item
+        android:id="@+id/nav_decoration"
+        android:icon="@drawable/decorative"
+        android:title="décoration" />
+    <item
+        android:id="@+id/nav_accessoires"
+        android:icon="@drawable/jewelry"
+        android:title="Accessoires" />
+    <item
+        android:id="@+id/nav_art"
+        android:icon="@drawable/art"
+        android:title="Art" />
+
+    <item
+        android:id="@+id/nav_collection"
+        android:icon="@drawable/cards"
+        android:title="Objets de collection" />
+    <item
+        android:id="@+id/nav_musique"
+        android:icon="@drawable/music"
+        android:title="Instruments de musique" />
+    </group>
+</menu>
