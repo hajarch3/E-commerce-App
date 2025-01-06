@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -30,26 +30,12 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
+   
+    
+      
         <activity
-            android:name=".AccessoiresActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ArtActivity"
-            android:exported="true" />
-        <activity
-            android:name=".CollectionActivity"
-            android:exported="true" />
-        <activity
-            android:name=".DecorationActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MeubleActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MusiqueActivity"
-            android:exported="true" />
-        <activity
-            android:name=".PanierActivity"
+            android:name=".SignupActivity"
+
             android:exported="true" />
     </application>
 
