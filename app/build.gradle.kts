@@ -1,12 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
-
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
-
-    alias(libs.plugins.google.gms.google.services)
-    
-
 }
 
 android {
@@ -39,15 +33,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
