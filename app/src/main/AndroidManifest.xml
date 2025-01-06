@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_Commerce_app"
         tools:targetApi="31">
+
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -20,14 +22,34 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Déclaration de MenuActivity -->
+        </activity> <!-- Déclaration de MenuActivity -->
         <activity
             android:name=".MenuActivity"
             android:exported="true" />
+
         <activity
             android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AccessoiresActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ArtActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CollectionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DecorationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MeubleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MusiqueActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PanierActivity"
             android:exported="true" />
     </application>
 

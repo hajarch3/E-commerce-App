@@ -8,14 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class objet_fragment extends Fragment {
-
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link MeubleFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class MeubleFragment extends Fragment {
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_objet_fragment, container, false);
+        return inflater.inflate(R.layout.fragment_meuble, container, false);
     }
 }
