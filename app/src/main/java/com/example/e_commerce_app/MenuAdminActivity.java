@@ -16,17 +16,17 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuAdminActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_menu_admin);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        imageButton = findViewById(R.id.menu_logo);
+        drawerLayout = findViewById(R.id.draweradmin_layout);
+        imageButton = findViewById(R.id.menuadmin_logo);
 
         // Ouvrir le tiroir de navigation lorsque l'icône est cliquée
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -36,44 +36,24 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view_admin);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment selectedFragment = null;
 
                 // Utilisation de else if pour gérer les clics
-                if (item.getItemId() == R.id.nav_meuble) {
-                    selectedFragment = new MeubleFragment();
-                } else if (item.getItemId() == R.id.nav_decoration) {
-                    selectedFragment = new DecoFragment();
-                } else if (item.getItemId() == R.id.nav_accessoires) {
-                    selectedFragment = new AccessoiresFragment();
-                } else if (item.getItemId() == R.id.nav_art) {
-                    selectedFragment = new ArtFragment();
-                } else if (item.getItemId() == R.id.nav_collection) {
-                    selectedFragment = new ObjetFragment();
-                } else if (item.getItemId() == R.id.nav_musique) {
-                    selectedFragment = new MusiqueFragment();
+                if (item.getItemId() == R.id.nav_ajouter_prd) {
+                    selectedFragment = new AddProductFragment();
+                } else if (item.getItemId() == R.id.nav_lister_prd) {
+                    selectedFragment = new ProductListFragment();
                 }
-              else if (item.getItemId() == R.id.panierButton) {
-                selectedFragment = new PanierFragment();}
-//                else if (item.getItemId() == R.id.ADMIN) {
-//                    selectedFragment = new UsersFragment();}
-                 else if (item.getItemId() == R.id.loginButton) {
-                    Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
-                    startActivity(intent);
 
-            }
-                 else {
-                    // Si aucune correspondance, afficher un message
-                    Toast.makeText(MenuActivity.this, "Option non reconnue", Toast.LENGTH_SHORT).show();
-                }
 
                 // Remplacer le contenu du conteneur par le fragment sélectionné
                 if (selectedFragment != null) {
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.fragment_container, selectedFragment);
+                    transaction.replace(R.id.fragment_container_admin, selectedFragment);
                     transaction.commit();
                 }
 
@@ -83,5 +63,4 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
     }
-    }
-
+}

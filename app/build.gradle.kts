@@ -72,5 +72,9 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
 
 
+    // Ajouter la dépendance Dropbox SDK
+    implementation("com.dropbox.core:dropbox-core-sdk:5.4.0")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
 
 }
