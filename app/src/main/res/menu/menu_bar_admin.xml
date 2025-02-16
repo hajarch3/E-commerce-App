@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Produits">
+        <menu>
+            <item
+                android:id="@+id/nav_lister_prd"
+                android:icon="@drawable/features"
+                android:title="Lister" />
+            <item
+                android:id="@+id/nav_ajouter_prd"
+                android:icon="@drawable/newproduct"
+                android:title="ajouter" />
+        </menu>
+    </item>
+    <item
+        android:title="Utilisateurs">
+        <menu>
+            <item
+                android:id="@+id/nav_lister_user"
+                android:icon="@drawable/group"
+                android:title="Lister" />
+            <item
+                android:id="@+id/nav_ajouter_user"
+                android:icon="@drawable/addgroup"
+                android:title="ajouter" />
+        </menu>
+    </item>
+
+
+
+</menu>
