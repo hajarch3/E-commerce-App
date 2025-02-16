@@ -14,11 +14,18 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignupActivity  extends AppCompatActivity {
 
     EditText name,email,password;
     private FirebaseAuth auth;
+    FirebaseFirestore fStore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +35,7 @@ public class SignupActivity  extends AppCompatActivity {
         name=findViewById(R.id.name);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
+        fStore= FirebaseFirestore.getInstance();
     }
 
     public void signup(View view){
@@ -52,8 +60,18 @@ public class SignupActivity  extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+                    FirebaseUser user=auth.getCurrentUser();
                     Toast.makeText(SignupActivity.this,"success",Toast.LENGTH_SHORT).show();
+                    DocumentReference df= fStore.collection("Users").document(user.getUid());
+                    Map<String,Object> userinfo=new HashMap<>();
+                    userinfo.put("Username",name.getText().toString());
+                    userinfo.put("Useremail",email.getText().toString());
+                    userinfo.put("Userpass",password.getText().toString());
+                    userinfo.put("isAdmin","1");
+                    df.set(userinfo);
+
                     startActivity(new Intent(SignupActivity.this,MainActivity.class));
+                    finish();
 
                 }else {
                     Toast.makeText(SignupActivity.this,"fail"+task.getException(),Toast.LENGTH_SHORT).show();

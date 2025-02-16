@@ -58,6 +58,8 @@ public class MenuActivity extends AppCompatActivity {
                 }
               else if (item.getItemId() == R.id.panierButton) {
                 selectedFragment = new PanierFragment();}
+//                else if (item.getItemId() == R.id.ADMIN) {
+//                    selectedFragment = new UsersFragment();}
                  else if (item.getItemId() == R.id.loginButton) {
                     Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
                     startActivity(intent);
