@@ -12,6 +12,11 @@
         android:title="panier"
         android:icon="@drawable/panier"
         />
+    <item
+        android:id="@+id/ADMIN"
+        android:title="ADMIN"
+
+        />
 <item
     android:title="Catégories">
     <menu>
