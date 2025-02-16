@@ -48,6 +48,11 @@ public class MenuAdminActivity extends AppCompatActivity {
                 } else if (item.getItemId() == R.id.nav_lister_prd) {
                     selectedFragment = new ProductListFragment();
                 }
+                else if (item.getItemId() == R.id.nav_lister_user) {
+                    selectedFragment = new UsersListFragment();
+                }else if (item.getItemId() == R.id.nav_ajouter_user) {
+                    selectedFragment = new UsersFragment();
+                }
 
 
                 // Remplacer le contenu du conteneur par le fragment sélectionné

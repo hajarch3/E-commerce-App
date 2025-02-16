@@ -70,12 +70,12 @@ public class LoginActivity extends AppCompatActivity {
                     Log.d("TAG","onSuccess"+documentSnapshot.getData());
                     String isAdmin = documentSnapshot.getString("isAdmin");
                     if (isAdmin != null && isAdmin.equals("0")) {
-                        startActivity(new Intent(getApplicationContext(),AdminActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MenuAdminActivity.class));
                         finish();
                     }
                     if (isAdmin != null && isAdmin.equals("1")) {
 
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(),MenuActivity.class));
                         finish();
                     }
                 }
