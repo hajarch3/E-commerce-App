@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.material3)
 
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -71,5 +72,9 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
 
 
+    // Ajouter la dépendance Dropbox SDK
+    implementation("com.dropbox.core:dropbox-core-sdk:5.4.0")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
 
 }

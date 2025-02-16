@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="45dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <EditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titre"
+            android:paddingTop="18dp" />
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description" />
+
+        <EditText
+            android:id="@+id/editTextType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type" />
+
+        <EditText
+            android:id="@+id/editTextImageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:hint="URL de l'image"
+            android:inputType="textUri" />
+
+        <Button
+            android:id="@+id/buttonSelectImage"
+            android:layout_width="229dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn"
+            android:text="Sélectionner une image" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn"
+            android:text="Enregistrer" />
+
+    </LinearLayout>
+
+</RelativeLayout>
