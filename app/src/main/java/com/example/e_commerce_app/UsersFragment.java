@@ -38,8 +38,7 @@ public class UsersFragment extends Fragment {
     private FirebaseAuth auth;
     private FirebaseFirestore firestore;
 
-    private UserAdapter userAdapter;
-    private List<User> userList;
+
 
     @Nullable
     @Override

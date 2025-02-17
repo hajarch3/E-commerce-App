@@ -36,6 +36,7 @@ public class ProduitsAdapter extends RecyclerView.Adapter<ProduitsAdapter.ViewHo
         Produits produit = produitsList.get(position);
         holder.titleTextView.setText(produit.getTitre());
         holder.descriptionTextView.setText(produit.getDescription());
+        holder.prixTextView.setText(produit.getPrix());
 
         // Modifier l'URL de Dropbox
         String originalUrl = produit.getUrl();
@@ -54,7 +55,7 @@ public class ProduitsAdapter extends RecyclerView.Adapter<ProduitsAdapter.ViewHo
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView titleTextView;
+        TextView titleTextView , prixTextView;
         TextView descriptionTextView;
         ImageView imageView;
 
@@ -63,6 +64,7 @@ public class ProduitsAdapter extends RecyclerView.Adapter<ProduitsAdapter.ViewHo
             titleTextView = itemView.findViewById(R.id.item_title);
             descriptionTextView = itemView.findViewById(R.id.item_description);
             imageView = itemView.findViewById(R.id.item_image);
+            prixTextView = itemView.findViewById(R.id.item_prix);
         }
     }
 }

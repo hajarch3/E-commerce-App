@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.BreakIterator;
 import java.util.List;
 
 public class ProductAdapter_admin extends RecyclerView.Adapter<ProductAdapter_admin.ProductViewHolder> {
@@ -50,6 +51,7 @@ public class ProductAdapter_admin extends RecyclerView.Adapter<ProductAdapter_ad
         holder.textViewTitle.setText(product.getTitre());
         holder.textViewDescription.setText(product.getDescription());
         holder.textViewType.setText(product.getType());
+        holder.textViewPrix.setText(product.getPrix());
 
         Glide.with(context)
                 .load(product.getUrl())
@@ -70,7 +72,8 @@ public class ProductAdapter_admin extends RecyclerView.Adapter<ProductAdapter_ad
     }
 
     static class ProductViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewTitle, textViewDescription, textViewType;
+
+        TextView textViewTitle, textViewDescription, textViewType ,textViewPrix;
         ImageView imageViewProduct;
         Button buttonDelete, buttonEdit;
 
@@ -80,6 +83,7 @@ public class ProductAdapter_admin extends RecyclerView.Adapter<ProductAdapter_ad
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewDescription = itemView.findViewById(R.id.textViewDescription);
             textViewType = itemView.findViewById(R.id.textViewType);
+            textViewPrix = itemView.findViewById(R.id.textViewPrix);
             imageViewProduct = itemView.findViewById(R.id.imageViewProduct);
             buttonDelete = itemView.findViewById(R.id.buttonDelete);
             buttonEdit = itemView.findViewById(R.id.buttonEdit);

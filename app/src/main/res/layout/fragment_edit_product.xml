@@ -26,6 +26,8 @@
         android:layout_height="wrap_content"
         android:hint="Description" />
 
+
+
     <EditText
         android:id="@+id/editTextType"
         android:layout_width="match_parent"
@@ -39,7 +41,11 @@
         android:hint="URL de l'image"
         android:focusable="false"
         android:clickable="false" />
-
+        <EditText
+            android:id="@+id/editTextPrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prix" />
     <Button
         android:id="@+id/buttonSelectImage"
         android:layout_width="match_parent"

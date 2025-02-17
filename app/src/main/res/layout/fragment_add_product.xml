@@ -39,6 +39,11 @@
             android:focusable="false"
             android:hint="URL de l'image"
             android:inputType="textUri" />
+        <EditText
+            android:id="@+id/editTextPrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prix" />
 
         <Button
             android:id="@+id/buttonSelectImage"
