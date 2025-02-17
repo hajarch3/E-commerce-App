@@ -41,6 +41,18 @@
             android:text="prix"
             android:textSize="14sp" />
 
+        <ImageButton
+            android:id="@+id/buttonEdit"
+            android:layout_width="60dp"
+            android:layout_height="47dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackground"
+            android:maxWidth="30dp"
+            android:maxHeight="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/addtobasket" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
