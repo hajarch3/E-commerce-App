@@ -32,32 +32,48 @@
             android:paddingTop="4dp"
             android:textSize="14sp" />
 
+
         <TextView
             android:id="@+id/textViewType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="4dp"
             android:textSize="14sp" />
-
+        <TextView
+            android:id="@+id/textViewPrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:textSize="14sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="8dp">
+            android:gravity="center"
+            android:layout_marginTop="20dp">
 
             <Button
                 android:id="@+id/buttonEdit"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Modifier" />
+                android:text="Modifier"
+                android:textColor="#F2E6D2"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:backgroundTint="#580408"
+                android:layout_marginEnd="16dp"/>
 
             <Button
                 android:id="@+id/buttonDelete"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:textColor="#F2E6D2"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:backgroundTint="#580408"
                 android:text="Supprimer" />
+
+
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

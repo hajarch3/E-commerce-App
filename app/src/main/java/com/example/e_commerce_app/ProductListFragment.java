@@ -138,7 +138,7 @@ public class ProductListFragment extends Fragment implements ProductAdapter_admi
         editProductFragment.setArguments(bundle);
 
         getActivity().getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, editProductFragment)
+                .replace(R.id.fragment_container_admin, editProductFragment)
                 .addToBackStack(null)
                 .commit();
     }

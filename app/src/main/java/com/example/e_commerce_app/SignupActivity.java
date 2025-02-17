@@ -64,9 +64,9 @@ public class SignupActivity  extends AppCompatActivity {
                     Toast.makeText(SignupActivity.this,"success",Toast.LENGTH_SHORT).show();
                     DocumentReference df= fStore.collection("Users").document(user.getUid());
                     Map<String,Object> userinfo=new HashMap<>();
-                    userinfo.put("Username",name.getText().toString());
-                    userinfo.put("Useremail",email.getText().toString());
-                    userinfo.put("Userpass",password.getText().toString());
+                    userinfo.put("username",name.getText().toString());
+                    userinfo.put("email",email.getText().toString());
+
                     userinfo.put("isAdmin","1");
                     df.set(userinfo);
 

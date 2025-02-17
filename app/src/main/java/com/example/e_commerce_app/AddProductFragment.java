@@ -1,5 +1,6 @@
 package com.example.e_commerce_app;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,20 +30,22 @@ import java.io.InputStream;
 public class AddProductFragment extends Fragment {
 
     private static final String TAG = "AddProductFragment";
-    private static final String ACCESS_TOKEN = "sl.u.AFhpprZnJrDiy2imJdv7f6E6uL0t1StqbEtOW5uYyFQMraKHUOLgxDkkLIRVDPDUEGQ1_uc6XhCOtERnd3ktPXHdfyxJ_aVMOOKgzRXgeDTRAHFgK5Xu1xDSrkhSvOpWufaii76mXXDFmtKTNgKj2FC1gwPcgEpj_5mN_4Owz_CRWjfAeWAog05-R-bn5CSByMLul2TKx-Q-wS8IjnZgzoN8tUZOCMcaLFjUgbc7ZA-HekLOYtWk5gXLC5lII7FIZVsP1_92iPnk2uglS_juCCWq3gXwkkhQCxVnNd-d50TY0c_qZ4m59mIXXzjxyO9_mgkKuvSlXJwGtEQNkURzlGssZuC6fOiXff99M4f9qsTOkl4qnuZODWum7aQ4LLbnuVJ0dUNR8VZDwJ1KH-tPL2HGRvLSVdt9WBDO39zcebgps4b52FEwYdHIgsQKeRx8GYXpldE2bbtYgCUjnkLn9cH4y8Jirp70cwrDmuDXFrDAGnavmO4gONp7-TxJ3RaE5ptIKgMiXFAakV204Zcasedzundp1DvIizNMM7KANjrPWhzlAhq21l22kb-HDBOerKRrmX0A15hoRCMZrAjnZUm6qBF__wdURK0Jqs4GEVw_S9JAJ-MHxDkEx-9SLtLeRKltauxUFIl7lIqY1zn9CWO-FCEeaj-nIoGeo0FK03Vxjv8NJy3d0CKLQIBlwZz8Vx1o7Dhba-nWZakymM9ZAXWEYMXTRchc7orog1i0SgzlNFyNWtAP9mBoq-YmTWCSQKJ_j3Pi6Dfp9bbXXQyeIqWILHXjuhXm-kob7BlkuvePRniecRIN9w37zrp45nKt_Q4ANYncIIeevoF5i-6pwQEFiurwhYJS8BfTDyZBf8Jjkdg4FwRJjIhQGM2u2BG9LqzC7hB_JVp3w63UYAwcjzmRy6A1K0S1uvmtTGIo-SW1WcYmWa2ZnIUSSg8DkILQp1n346-5QRjWOQYbV1s3MKaKwd53s_kYPCzJEr1_SxdM0RWPFP_r0-xDkKEcyvsRGyBY_Z79KYMnISHILIPi-LbT9vsHP66YvRibDD7N1BaAxkXJmNt1Et4b-vYGVH7XNMM60NrH3i7LEecW7MyfDJb5XWyZmHxNWbzdsiVri2NNozqKiwV-s6Sn6-BozMLnVdnC_6mbRlGERJBSmz7MrVIE1aZO3s_ONtn2SXqVGgcxvzUXkGultytq8rlvJcABkQ571SK6blWZYcjo8sBgkh75Sibu9Z2vimCEmdQa3OvVIWj3VK8SFfRZxQifW5-822nwO1i5fvWftDZPV84o5UU-fmj-89nUTGnY0pLZJtEl8szkvgnJ9hXaDkmfT4mT_tu1cDNf9pUFNruoKCPeCipTxJ9Cpg6iolDFJWhTeP_zaIubCDS9bqMrGGEDOesP7D6odEJVNg3wCEbYtFl9kpJmgZ2JNl8xJh9uDJW1IKKjUkNVQF_izQCobqVnm9W441o"; // Remplacez par votre nouveau jeton d'accès
+    private static final String ACCESS_TOKEN = "sl.u.AFhJ6upjvLav3LhXh12phkVRvD3gFhTva81zkXxr2gcNJ0F05lOupVjuhFgKey-NwzOudkkfS2kWN1KdxKEOjArIhemShYZ8m1ujHJIWmN-X3QgGt1XRDP90PKt1HNj0SsaO_Yj9zZ_VpusD6h9vwTJ1joMJEarmdnHziHXstywg4W9VPw7Dlq-gJ5H_RhLHhQGbnH-0rUp6CZ-qExSXy6pvm_kyS4iuTUZWHTGi3ndJE0kgPMsfCqmXESLF0ZIYMqwF0zbem3zZZcJPEolkmOg33miTRRu5PqYy3rvyGKh8ZxTJv-iFmVgxOm_-nT_5wJeOsKrtENxdOjsqdqeUtdE-VdqMxCzbcNcn7kywh4dMEkZhu_kuOv8waNd4GUgIEGAH3kPKHQ_MvYQZqV8GtiWQ9U_cZk4XDMLmxdQHnS5GMIwb7VcvWTZlEK5nIUqlidhazs9-UwXt2sZMs2E1vTd28CnF2hfJ2_8DRcTHbPu9MwFbW5nXVuNey6u_nCnENhou2QuPx53CiTc8xfYcdwWf3EWFAB687jYTPs7PdGCd2_gRhdVmNrtPO3xxr4eg-RC0CPh__WehRnql58c-vrPX_D1syqVisn2uKjewftqPzdM4O-P3MjnU29cHLVAsxbZVUFNbDdvPCPehmem8k4PpiF4UThBTIOiMO10mHKL62U1VOMZWvkWqfyRN30kCkGWYShZE7ynUfp7thxRACl-WVXZuHlmsvamvoDzI_s2TW9rLOkoSpuG_8WaqSaO6CmOPNbQO5h7mIN28Do-jgMhRqdKpEcjnNW-nAFPqwKPS10CoESqT099WiPmQ_yumsDR5sIDGA4V1FGu1cehUGImEVTaG0zFM7xhakGy4ReY-zIK00Jy78UPNRO8aWr9uRNR84PCz94DYc_vrDxdHKlhatGavUS-Bi2StWLjgEYkD_89YbN0bOliyGScRd8z_zl8CGqxQ7AqkTEmWu5ccPWy_5ev4KM74rDKzSEt8q9cr8bIG3zN6sr0QRVdntG_4zLxoAn_yUHFu6ApS_a96VJY1zfep2oCxhHKZTsWVHBinOocj4DYK_2zyO_qMhX9vqcX2MEi0Mn7QucEn2nzkqaxiknj_UQLjmF31r_Bl16qXgKzGYg0QY3ruIFIhIroTKe_EFft8O54YLqdUa57I0ebOrKg5hJGP5wuEm3fTtb2BBDwh_Ea31nhChdQv6oOn4A1f7NGkrcJd2CDfo3Iebm3l4Yug2xL28mNdtsg4kTNW34iIaPEA-3EC6hUWw-oDrxRzlQNlirtLiJyXg5qgDnm89_IKT3-C0DUnH7yLR14tL51GfLxPUoMvAUA9PzfC2dODNA_BiXzHritgftITcO0XyQoSu-DoM_9rT5KJFxkkXP4AkD0g8KfdzMuuhCjpltArzrjBzltx5MZSdAgjLQpllpEqdQxzCGXPHYoTlWOfKrXj_j4jPOUskpKdIK3EulU"; // Remplacez par votre nouveau jeton d'accès
 
-    private EditText editTextTitle, editTextDescription, editTextType, editTextImageUrl;
+    private EditText  editTextPrix, editTextTitle, editTextDescription, editTextType, editTextImageUrl;
     private FirebaseFirestore db;
     private DbxClientV2 dropboxClient;
 
     private Uri imageUri;
 
+    @SuppressLint("MissingInflatedId")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_add_product, container, false);
 
         editTextTitle = view.findViewById(R.id.editTextTitle);
+        editTextPrix = view.findViewById(R.id.editTextPrix);
         editTextDescription = view.findViewById(R.id.editTextDescription);
         editTextType = view.findViewById(R.id.editTextType);
         editTextImageUrl = view.findViewById(R.id.editTextImageUrl);
@@ -84,7 +87,7 @@ public class AddProductFragment extends Fragment {
         String title = editTextTitle.getText().toString().trim();
         String description = editTextDescription.getText().toString().trim();
         String type = editTextType.getText().toString().trim();
-
+        String prix = editTextPrix.getText().toString().trim();
         Log.d(TAG, "Title: " + title);
         Log.d(TAG, "Description: " + description);
         Log.d(TAG, "Type: " + type);
@@ -114,7 +117,7 @@ public class AddProductFragment extends Fragment {
 
                 getActivity().runOnUiThread(() -> {
                     Log.d(TAG, "Image téléchargée sur Dropbox, URL: " + dropboxUrl[0]);
-                    saveProductToFirestore(title, description, type, dropboxUrl[0]);
+                    saveProductToFirestore(title, description, type, dropboxUrl[0] , prix );
                 });
 
             } catch (Exception e) {
@@ -124,8 +127,8 @@ public class AddProductFragment extends Fragment {
         }).start();
     }
 
-    private void saveProductToFirestore(String title, String description, String type, String imageUrl) {
-        Produits produit = new Produits(description, title, type, imageUrl);
+    private void saveProductToFirestore(String title, String description, String type, String imageUrl , String prix) {
+        Produits produit = new Produits(description, title, type , imageUrl , prix);
         db.collection("Produits").add(produit).addOnSuccessListener(documentReference -> {
             Log.d(TAG, "Produit enregistré dans Firestore");
             Toast.makeText(getActivity(), "Produit enregistré avec succès", Toast.LENGTH_SHORT).show();
