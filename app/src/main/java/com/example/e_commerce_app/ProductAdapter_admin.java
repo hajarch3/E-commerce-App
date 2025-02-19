@@ -51,7 +51,7 @@ public class ProductAdapter_admin extends RecyclerView.Adapter<ProductAdapter_ad
         holder.textViewTitle.setText(product.getTitre());
         holder.textViewDescription.setText(product.getDescription());
         holder.textViewType.setText(product.getType());
-        holder.textViewPrix.setText(product.getPrix());
+        holder.textViewPrix.setText(product.getPrix() +".DH");
 
         Glide.with(context)
                 .load(product.getUrl())
