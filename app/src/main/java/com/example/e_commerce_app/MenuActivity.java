@@ -50,6 +50,13 @@ public class MenuActivity extends AppCompatActivity {
         // Passer la liste du panier au CartFragment
         cartFragment.setCartList(cartList);
 
+        // Afficher HomePageFragment au démarrage
+        if (savedInstanceState == null) {
+            DecoFragment HomePageFragment = new DecoFragment();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, HomePageFragment, "HomePageFragment");
+            transaction.commit();
+        }
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
