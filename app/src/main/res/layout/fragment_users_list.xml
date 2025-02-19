@@ -6,7 +6,7 @@
     android:padding="16dp">
 
     <TextView
-        android:text="Users List"
+        android:text="Liste Utilisateurs"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#580408"

@@ -52,7 +52,7 @@ public class MenuActivity extends AppCompatActivity {
 
         // Afficher HomePageFragment au démarrage
         if (savedInstanceState == null) {
-            DecoFragment HomePageFragment = new DecoFragment();
+            homeFragment HomePageFragment = new homeFragment();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, HomePageFragment, "HomePageFragment");
             transaction.commit();

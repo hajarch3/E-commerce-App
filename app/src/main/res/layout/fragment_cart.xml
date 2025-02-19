@@ -3,21 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="8dp"
+    android:layout_marginTop="20dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/totalPriceTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Prix total: 0 DH"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:padding="8dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCart"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:padding="8dp" />
     <TextView
         android:id="@+id/emptyCartText"
@@ -26,4 +30,6 @@
         android:text="Votre panier est vide"
         android:visibility="gone"
         android:gravity="center"/>
+
+
 </LinearLayout>
