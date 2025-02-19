@@ -1,72 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp"
-   >
+    android:gravity="top"
+    android:padding="15dp"
+    android:background="#81F2E6D2">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="center_horizontal"
-        android:padding="24dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="85dp"
+
         >
 
-        <EditText
-            android:id="@+id/usernameInput"
+        <TextView
+            android:text="Ajouter des Utilisateurs"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#580408"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/custom_edittext"
-            android:drawablePadding="8dp"
-            android:hint="Enter Username"
-            android:padding="8dp"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/cardview_dark_background"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginBottom="16dp"/>
 
-        <EditText
-            android:id="@+id/emailInput"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/custom_edittext"
-            android:drawablePadding="8dp"
-            android:hint="Enter Email"
-            android:padding="8dp"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/cardview_dark_background"
-            android:layout_marginTop="20dp"/>
+            android:layout_margin="8dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="80dp"
+            >
 
-        <EditText
-            android:id="@+id/passwordInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_edittext"
-            android:drawablePadding="8dp"
-            android:hint="Enter Password"
-            android:padding="8dp"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/cardview_dark_background"
-            android:layout_marginTop="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="@drawable/custom_edittext">
 
-        <Button
-            android:id="@+id/addUserButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Add user"
-            android:textColor="#F2E6D2"
-            android:textSize="18sp"
-            android:padding="12dp"
-            android:backgroundTint="#580408"
-            app:cornerRadius = "20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"/>
+                <EditText
+                    android:id="@+id/usernameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="Enter Username"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"/>
 
+                <EditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="Enter Email"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"/>
 
+                <EditText
+                    android:id="@+id/passwordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="Enter Password"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"/>
+
+                <Button
+                    android:id="@+id/addUserButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add user"
+                    android:textColor="#F2E6D2"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:backgroundTint="#580408"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
-
 
 </LinearLayout>
