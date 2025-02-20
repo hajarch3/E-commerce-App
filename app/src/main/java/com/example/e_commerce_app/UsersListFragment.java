@@ -105,7 +105,7 @@ public class UsersListFragment extends Fragment {
 
     private void showUpdateDialog(User user) {
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(getContext());
-        builder.setTitle("Update User");
+        builder.setTitle("Modifier Utilisateur");
 
         View view = getLayoutInflater().inflate(R.layout.update_user, null);
         builder.setView(view);

@@ -84,11 +84,7 @@ public class MenuActivity extends AppCompatActivity {
                     selectedFragment = new MusiqueFragment();
                 } else if (item.getItemId() == R.id.panierButton) {
                     selectedFragment = cartFragment;
-                } else if (item.getItemId() == R.id.loginButton) {
-                    Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    return true;
-                } else {
+                }  else {
                     Toast.makeText(MenuActivity.this, "Option non reconnue", Toast.LENGTH_SHORT).show();
                 }
 
